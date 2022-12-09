@@ -8,6 +8,7 @@ import { GetStaticProps } from "next";
 import { useTranslation } from "next-i18next";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import "animate.css";
 
 const PAboutUs = () => {
   const { t } = useTranslation(["aboutus", "common", "nav", "footer"]);

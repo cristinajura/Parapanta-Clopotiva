@@ -2,8 +2,8 @@
 
 .container {
   scroll-behavior: smooth;
-  --main-gray: rgb(175, 191, 202);
-  --border-graycontainer: 2px solid rgb(219, 230, 239);
+  --main-gray: rgb(202, 219, 231);
+  --border-graycontainer: 2px solid rgb(243, 247, 251);
   --footer-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
   --button-shadow: 3px 3px rgb(147, 146, 146);
   --footer-color: rgb(43, 73, 94);
