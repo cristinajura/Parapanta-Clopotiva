@@ -1,0 +1,9 @@
+{
+  "contactFirstName": "Prenume *",
+  "contactLastName": "Nume *",
+  "contactEmail": "Email *",
+  "contactTel": "Telefon",
+  "contactOptional": "(optional)",
+  "contactText": "Introdu mesajul *",
+  "contactBtn": "Trimite"
+}

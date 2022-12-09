@@ -1,0 +1,9 @@
+{
+  "contactFirstName": "First name *",
+  "contactLastName": "Last name *",
+  "contactEmail": "Email *",
+  "contactTel": "Telephone number",
+  "contactOptional": "(optional)",
+  "contactText": "Enter your message *",
+  "contactBtn": "Send"
+}

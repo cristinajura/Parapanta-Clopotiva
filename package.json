@@ -9,14 +9,41 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/material": "^5.10.17",
+    "@netlify/next": "^1.4.1",
+    "@react-google-maps/api": "^2.17.0",
+    "@reduxjs/toolkit": "^1.9.0",
     "@types/node": "18.11.9",
     "@types/react": "18.0.25",
     "@types/react-dom": "18.0.9",
+    "animate.css": "^4.1.1",
+    "aos": "^3.0.0-beta.6",
+    "axios": "^1.2.0",
+    "cookies-next": "^2.1.1",
     "eslint": "8.28.0",
     "eslint-config-next": "13.0.4",
+    "google-map-react": "^2.2.0",
+    "i18next": "^22.0.7",
+    "js-cookie": "^3.0.1",
     "next": "13.0.4",
+    "next-i18next": "^13.0.0",
+    "node-sass": "^7.0.3",
     "react": "18.2.0",
+    "react-cookie": "^4.1.1",
     "react-dom": "18.2.0",
-    "typescript": "4.9.3"
+    "react-i18next": "^12.0.0",
+    "react-icons": "^4.6.0",
+    "react-player": "^2.11.0",
+    "react-redux": "^8.0.5",
+    "sass": "^1.56.1",
+    "sharp": "^0.31.2",
+    "typescript": "4.9.3",
+    "typescript-cookie": "^1.0.4"
+  },
+  "devDependencies": {
+    "@types/aos": "^3.0.4",
+    "@types/js-cookie": "^3.0.2"
   }
 }
