@@ -401,7 +401,7 @@
   cursor: pointer;
 }
 .formButton:hover {
-  transform: scale(1.1);
+  background: rgb(45, 162, 55);
 }
 
 .whatsapp {

@@ -2,30 +2,20 @@ import React from "react";
 import styles from "../styles/Home.module.css";
 import TopNav from "../components/Navbar";
 import Footer from "../components/Footer";
-// import { useRouter } from "next/router";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 import type { GetStaticProps } from "next";
-// import Link from "next/link";
 import { BsTelephone, BsWhatsapp } from "react-icons/bs";
 import Whatsapp from "../components/Whatsapp";
 import "animate.css";
 
 const PVoucher = () => {
-  // const router = useRouter();
-  // const changeTo = router.locale === "en" ? "ro" : "en";
-
   const { t } = useTranslation(["voucher", "common", "nav", "footer"]);
 
   return (
     <div className="animate__animated animate__fadeIn">
       <div className={styles.container}>
         <TopNav />
-        {/* <Link href="/voucher" locale={changeTo}>
-          <button className={styles.laguageBtn}>
-            {t("common:changeLanguageBtn")}
-          </button>
-        </Link> */}
         <Whatsapp />
         <div className={styles.cardContainer}>
           <div className="animate__animated animate__zoomIn">

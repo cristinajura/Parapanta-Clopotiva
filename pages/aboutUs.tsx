@@ -5,16 +5,11 @@ import Footer from "../components/Footer";
 import Whatsapp from "../components/Whatsapp";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { GetStaticProps } from "next";
-// import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
-// import Link from "next/link";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 const PAboutUs = () => {
-  // const router = useRouter();
-  // const changeTo = router.locale === "en" ? "ro" : "en";
-
   const { t } = useTranslation(["aboutus", "common", "nav", "footer"]);
 
   React.useEffect(() => {
