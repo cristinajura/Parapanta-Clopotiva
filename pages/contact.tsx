@@ -18,8 +18,8 @@ const PContact = () => {
         <TopNav />
         <Whatsapp />
         <Contact />
-        <Footer />
       </div>
+      <Footer />
     </div>
   );
 };

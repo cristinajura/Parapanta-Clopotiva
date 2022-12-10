@@ -42,8 +42,8 @@ const App = () => {
           aboutusText1={t("aboutus:aboutusText1")}
           aboutusBtn={t("aboutus:aboutusBtn")}
         />
-        <Footer />
       </div>
+      <Footer />
     </div>
   );
 };

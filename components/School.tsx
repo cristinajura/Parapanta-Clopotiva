@@ -21,9 +21,9 @@ const School: FC<Props> = ({ schoolTitle, schoolText1, schoolBtn1 }) => {
     <div className={styles.cardContainer}>
       <div className={styles.title}>{schoolTitle}</div>
       <div
-        data-aos="fade-in"
+        data-aos="flip-right"
         data-aos-duration="1000"
-        data-aos-easing="ease-in-out"
+        data-aos-easing="ease-in-linear"
         data-aos-once="true"
         data-aos-offset="200"
       >

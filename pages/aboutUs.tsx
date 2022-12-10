@@ -21,7 +21,6 @@ const PAboutUs = () => {
     <div className="animate__animated animate__fadeIn">
       <div className={styles.container}>
         <TopNav />
-
         <Whatsapp />
         <div className={styles.cardContainer}>
           <div className="animate__animated animate__zoomIn">
@@ -36,9 +35,9 @@ const PAboutUs = () => {
           <div className={styles.pilotsAlign}>
             <p className={styles.names}>{t("aboutusName1")}</p>
             <div
-              data-aos="fade-in"
+              data-aos="flip-down"
               data-aos-duration="1000"
-              data-aos-easing="ease-in-out"
+              data-aos-easing="ease-in-linear"
               data-aos-once="true"
               data-aos-offset="200"
             >
@@ -50,9 +49,9 @@ const PAboutUs = () => {
             </div>
             <p className={styles.names}>{t("aboutusName2")}</p>
             <div
-              data-aos="fade-in"
+              data-aos="flip-right"
               data-aos-duration="1000"
-              data-aos-easing="ease-in-out"
+              data-aos-easing="ease-in-linear"
               data-aos-once="true"
               data-aos-offset="200"
             >
@@ -64,9 +63,9 @@ const PAboutUs = () => {
             </div>
             <p className={styles.names}>{t("aboutusName3")}</p>
             <div
-              data-aos="fade-in"
+              data-aos="flip-left"
               data-aos-duration="1000"
-              data-aos-easing="ease-in-out"
+              data-aos-easing="ease-in-linear"
               data-aos-once="true"
               data-aos-offset="200"
             >
@@ -78,8 +77,8 @@ const PAboutUs = () => {
             </div>
           </div>
         </div>
-        <Footer />
       </div>
+      <Footer />
     </div>
   );
 };

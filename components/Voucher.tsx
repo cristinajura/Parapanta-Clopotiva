@@ -21,9 +21,9 @@ const Voucher: FC<Props> = ({ voucherTitle, voucherText1, voucherBtn }) => {
       <div className={styles.title}>{voucherTitle}</div>
       <p>{voucherText1}</p>
       <div
-        data-aos="fade-in"
+        data-aos="flip-left"
         data-aos-duration="1000"
-        data-aos-easing="ease-in-out"
+        data-aos-easing="ease-in-linear"
         data-aos-once="true"
         data-aos-offset="200"
       >

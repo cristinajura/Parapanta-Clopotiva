@@ -32,21 +32,13 @@ const PTandems = () => {
             alt="Tandem flying at Clopotiva site"
           />
           <p>{t("tandemText1")}</p>
-          <div
-            data-aos="fade-in"
-            data-aos-duration="1000"
-            data-aos-easing="ease-in-out"
-            data-aos-once="true"
-            data-aos-offset="200"
-          >
-            <img
-              src="https://live.staticflickr.com/65535/52532436193_7fcbe6039f.jpg"
-              alt="Parapanta Clopotiva take-off"
-            />
-          </div>
+          <img
+            src="https://live.staticflickr.com/65535/52532436193_7fcbe6039f.jpg"
+            alt="Parapanta Clopotiva take-off"
+          />
           <p>{t("tandemText2")}</p>
           <div
-            data-aos="fade-in"
+            data-aos="fade-down"
             data-aos-duration="1000"
             data-aos-easing="ease-in-out"
             data-aos-once="true"
@@ -59,7 +51,7 @@ const PTandems = () => {
           </div>
           <p>{t("tandemText3")}</p>
           <div
-            data-aos="fade-in"
+            data-aos="fade-down"
             data-aos-duration="1000"
             data-aos-easing="ease-in-out"
             data-aos-once="true"
@@ -72,7 +64,7 @@ const PTandems = () => {
           </div>
           <p>{t("tandemText4")}</p>
           <div
-            data-aos="fade-in"
+            data-aos="fade-down"
             data-aos-duration="1000"
             data-aos-easing="ease-in-out"
             data-aos-once="true"
@@ -85,7 +77,7 @@ const PTandems = () => {
           </div>
           <p>{t("tandemText5")}</p>
           <div
-            data-aos="fade-in"
+            data-aos="fade-down"
             data-aos-duration="1000"
             data-aos-easing="ease-in-out"
             data-aos-once="true"
@@ -122,8 +114,8 @@ const PTandems = () => {
             </button>
           </div>
         </div>
-        <Footer />
       </div>
+      <Footer />
     </div>
   );
 };

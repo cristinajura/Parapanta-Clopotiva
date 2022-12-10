@@ -51,10 +51,8 @@ const PVoucher = () => {
             </button>
           </div>
         </div>
-        <div>
-          <Footer />
-        </div>
       </div>
+      <Footer />
     </div>
   );
 };

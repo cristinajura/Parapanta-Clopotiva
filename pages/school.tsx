@@ -33,9 +33,9 @@ const PSchool = () => {
           />
           <p>{t("schoolText1")}</p>
           <div
-            data-aos="fade-in"
+            data-aos="fade-down"
             data-aos-duration="1000"
-            data-aos-easing="ease-in-out"
+            data-aos-easing="ease-in-linear"
             data-aos-once="true"
             data-aos-offset="200"
           >
@@ -46,9 +46,9 @@ const PSchool = () => {
           </div>
           <p>{t("schoolText2")}</p>
           <div
-            data-aos="fade-in"
+            data-aos="fade-down"
             data-aos-duration="1000"
-            data-aos-easing="ease-in-out"
+            data-aos-easing="ease-in-linear"
             data-aos-once="true"
             data-aos-offset="200"
           >
@@ -59,9 +59,9 @@ const PSchool = () => {
           </div>
           <p>{t("schoolText3")}</p>
           <div
-            data-aos="fade-in"
+            data-aos="fade-down"
             data-aos-duration="1000"
-            data-aos-easing="ease-in-out"
+            data-aos-easing="ease-in-linear"
             data-aos-once="true"
             data-aos-offset="200"
           >
@@ -72,9 +72,9 @@ const PSchool = () => {
           </div>
           <p>{t("schoolText4")}</p>
           <div
-            data-aos="fade-in"
+            data-aos="fade-down"
             data-aos-duration="1000"
-            data-aos-easing="ease-in-out"
+            data-aos-easing="ease-in-linear"
             data-aos-once="true"
             data-aos-offset="200"
           >
@@ -107,8 +107,8 @@ const PSchool = () => {
             </button>
           </div>
         </div>
-        <Footer />
       </div>
+      <Footer />
     </div>
   );
 };

@@ -20,9 +20,9 @@ const Tandems: FC<Props> = ({ tandemTitle, tandemText1, tandemBtn1 }) => {
     <div className={styles.cardContainer}>
       <div className={styles.title}>{tandemTitle}</div>
       <div
-        data-aos="fade-in"
+        data-aos="flip-down"
         data-aos-duration="1000"
-        data-aos-easing="ease-in-out"
+        data-aos-easing="ease-in-linear"
         data-aos-once="true"
         data-aos-offset="200"
       >
