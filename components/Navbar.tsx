@@ -32,7 +32,7 @@ const TopNav: FC = () => {
     <div>
       <nav className={styles.topNav}>
         <img
-          src="https://live.staticflickr.com/65535/52538042981_54621dc908_w.jpg"
+          src="https://live.staticflickr.com/65535/52555206343_6f2ce910cc_w.jpg"
           alt="Parapanta Clopotiva Logo"
         />
         <div style={{ display: "flex", flexDirection: "column" }}>
@@ -49,8 +49,8 @@ const TopNav: FC = () => {
                   style={{
                     border: "none",
                     fontSize: "20px",
-                    background: "var(--small-menu)",
                     marginTop: "-3px",
+                    background: "white",
                   }}
                   onClick={() => setMenu(!menu)}
                 >
@@ -58,7 +58,10 @@ const TopNav: FC = () => {
                 </button>
                 <div
                   className={styles.orangeLine}
-                  style={{ marginTop: "8px" }}
+                  style={{
+                    marginTop: "10px",
+                    background: "rgb(202, 219, 231)",
+                  }}
                 ></div>
               </li>
               <li key={1}>
@@ -90,6 +93,21 @@ const TopNav: FC = () => {
                 <Link className={styles.navLink} href="/contact">
                   {t("navContact")}
                 </Link>
+                <div
+                  className={styles.hideMenu}
+                  style={{
+                    width: "100%",
+                    height: "1.5px",
+                    boxShadow: "0 0 0 0",
+                  }}
+                >
+                  <div
+                    className={styles.orangeLine}
+                    style={{
+                      background: "rgb(202, 219, 231)",
+                    }}
+                  ></div>
+                </div>
               </li>
             </ul>
           </div>
