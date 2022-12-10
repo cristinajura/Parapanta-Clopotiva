@@ -157,7 +157,7 @@
   margin-top: 100px;
   margin-bottom: -80px;
   background-size: cover;
-  background-image: url("../public/202008.jpg");
+  background-image: url("/202008.jpg");
 }
 .homeBackground h1 {
   text-shadow: 4px 4px rgba(0, 0, 0, 0.7);
