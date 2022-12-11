@@ -30,7 +30,7 @@ const AboutUs: FC<Props> = ({ aboutusTitle, aboutusText1, aboutusBtn }) => {
       >
         <img
           src="https://live.staticflickr.com/65535/52521128314_ceff8fccf4.jpg"
-          alt="Parapanta Clopotiva"
+          alt="Paragliding Romania tandem flying collage"
         />
       </div>
       <button className={styles.buttons}>

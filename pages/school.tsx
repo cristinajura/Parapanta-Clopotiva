@@ -29,7 +29,7 @@ const PSchool = () => {
           </div>
           <img
             src="https://live.staticflickr.com/65535/52544599047_561ef0bb6d.jpg"
-            alt="Parapanta Clopotiva School"
+            alt="Scoala de zbor cu parapanta, Parapanta Clopotiva"
           />
           <p>{t("schoolText1")}</p>
           <div
@@ -54,7 +54,7 @@ const PSchool = () => {
           >
             <img
               src="https://live.staticflickr.com/65535/52532238834_da6c44f649.jpg"
-              alt="Parapanta Clopotiva School"
+              alt="Paragliding Romania school"
             />
           </div>
           <p>{t("schoolText3")}</p>
@@ -67,7 +67,7 @@ const PSchool = () => {
           >
             <img
               src="https://live.staticflickr.com/65535/52545065241_76fb7e0ac5.jpg"
-              alt="Paragliding Clopotiva School"
+              alt="Paragliding Clopotiva groundhandling"
             />
           </div>
           <p>{t("schoolText4")}</p>
@@ -80,7 +80,7 @@ const PSchool = () => {
           >
             <img
               src="https://live.staticflickr.com/65535/52552566250_570c2bcc69_w.jpg"
-              alt="Parapanta Clopotiva student taking-off"
+              alt="Parapanta Clopotiva decolare elev"
             />
           </div>
           <p>{t("schoolText5")}</p>

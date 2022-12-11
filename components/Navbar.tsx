@@ -8,6 +8,25 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { MdClose } from "react-icons/md";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
+function listenForOutsideClicks(
+  listening: any,
+  setListening: any,
+  menuRef: any,
+  setMenu: any
+) {
+  return () => {
+    if (listening) return;
+    if (!menuRef.current) return;
+    setListening(true);
+    [`click`, `touchstart`].forEach((type) => {
+      document.addEventListener(`click`, (e) => {
+        if (menuRef?.current?.contains(e.target)) return;
+        setMenu(false);
+      });
+    });
+  };
+}
+
 const TopNav: FC = () => {
   const router = useRouter();
   const changeTo = router.locale === "en" ? "ro" : "en";
@@ -18,6 +37,8 @@ const TopNav: FC = () => {
     router.push({ pathname, query }, asPath, { locale: newLocale });
   };
 
+  const menuRef = React.useRef(null);
+  const [listening, setListening] = React.useState(false);
   const [menu, setMenu] = React.useState(false);
 
   let isTabletOrPhone = useMediaQuery("(min-width:841px)");
@@ -28,6 +49,10 @@ const TopNav: FC = () => {
     ? { display: "block" }
     : { display: "none" };
 
+  React.useEffect(
+    listenForOutsideClicks(listening, setListening, menuRef, setMenu)
+  );
+
   return (
     <div>
       <nav className={styles.topNav}>
@@ -36,7 +61,7 @@ const TopNav: FC = () => {
           alt="Parapanta Clopotiva Logo"
         />
         <div style={{ display: "flex", flexDirection: "column" }}>
-          <div style={showIcon}>
+          <div ref={menuRef} style={showIcon}>
             <button className={styles.hideMenu} onClick={() => setMenu(!menu)}>
               <GiHamburgerMenu />
             </button>
@@ -58,10 +83,7 @@ const TopNav: FC = () => {
                 </button>
                 <div
                   className={styles.orangeLine}
-                  style={{
-                    marginTop: "10px",
-                    background: "rgb(202, 219, 231)",
-                  }}
+                  style={{ marginTop: "10px" }}
                 ></div>
               </li>
               <li key={1}>
@@ -101,12 +123,7 @@ const TopNav: FC = () => {
                     boxShadow: "0 0 0 0",
                   }}
                 >
-                  <div
-                    className={styles.orangeLine}
-                    style={{
-                      background: "rgb(202, 219, 231)",
-                    }}
-                  ></div>
+                  <div className={styles.orangeLine}></div>
                 </div>
               </li>
             </ul>

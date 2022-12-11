@@ -29,7 +29,7 @@ const Voucher: FC<Props> = ({ voucherTitle, voucherText1, voucherBtn }) => {
       >
         <img
           src="https://live.staticflickr.com/65535/52539617838_6fc8655bfc_c.jpg"
-          alt="Voucher view"
+          alt="Voucher Paragliding Clopotiva"
         />
       </div>
       <button className={styles.buttons}>

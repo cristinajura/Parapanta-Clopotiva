@@ -34,7 +34,7 @@ const PTandems = () => {
           <p>{t("tandemText1")}</p>
           <img
             src="https://live.staticflickr.com/65535/52532436193_7fcbe6039f.jpg"
-            alt="Parapanta Clopotiva take-off"
+            alt="Parapanta Clopotiva decolare"
           />
           <p>{t("tandemText2")}</p>
           <div
@@ -46,7 +46,7 @@ const PTandems = () => {
           >
             <img
               src="https://live.staticflickr.com/65535/52532394265_15cdbdd917.jpg"
-              alt="PArapanta Clopotiva Tandem"
+              alt="Parapanta Clopotiva zbor in tandem"
             />
           </div>
           <p>{t("tandemText3")}</p>
@@ -59,7 +59,7 @@ const PTandems = () => {
           >
             <img
               src="https://live.staticflickr.com/65535/52552114421_948ca2105b.jpg"
-              alt="Tandem Parapanta Clopotiva"
+              alt="Paragliding Romania, tandem flying at Clopotiva"
             />
           </div>
           <p>{t("tandemText4")}</p>
@@ -72,7 +72,7 @@ const PTandems = () => {
           >
             <img
               src="https://live.staticflickr.com/65535/52532393350_b6791224a8.jpg"
-              alt="Parapanta Clopotiva Tandem flying"
+              alt="Parapanta Romania, zbor cu parapanta la Clopotiva"
             />
           </div>
           <p>{t("tandemText5")}</p>
@@ -85,7 +85,7 @@ const PTandems = () => {
           >
             <img
               src="https://live.staticflickr.com/65535/52531919041_93e59ef6c5.jpg"
-              alt="Tandem paragliding"
+              alt="Tandem paragliding in Romania, Clopotiva"
             />
           </div>
           <p style={{ marginTop: "-5px" }}>{t("tandemText6")}</p>

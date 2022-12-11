@@ -29,7 +29,7 @@ const School: FC<Props> = ({ schoolTitle, schoolText1, schoolBtn1 }) => {
       >
         <img
           src="https://live.staticflickr.com/65535/52544599047_561ef0bb6d.jpg"
-          alt="Parapanta Clopotiva School"
+          alt="Scoala de zbor Parapanta Clopotiva"
         />
       </div>
       <p>{schoolText1}</p>
