@@ -60,8 +60,8 @@ const TopNav: FC = () => {
           src="https://live.staticflickr.com/65535/52555206343_6f2ce910cc_w.jpg"
           alt="Parapanta Clopotiva Logo"
         />
-        <div style={{ display: "flex", flexDirection: "column" }}>
-          <div ref={menuRef} style={showIcon}>
+        <div ref={menuRef} style={{ display: "flex", flexDirection: "column" }}>
+          <div style={showIcon}>
             <button className={styles.hideMenu} onClick={() => setMenu(!menu)}>
               <GiHamburgerMenu />
             </button>

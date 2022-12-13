@@ -45,6 +45,7 @@
   },
   "devDependencies": {
     "@types/aos": "^3.0.4",
+    "@types/google-map-react": "^2.1.7",
     "@types/js-cookie": "^3.0.2",
     "@types/react-onclickoutside": "^6.7.4"
   }
