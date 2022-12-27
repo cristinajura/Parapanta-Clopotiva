@@ -515,7 +515,7 @@
   margin: 10px auto;
   box-shadow: 3px 4px 10px rgb(63, 64, 66);
 }
-@media (max-width: 1300px) {
+@media (max-width: 1350px) {
   .search {
     margin: 10px auto;
   }
@@ -530,17 +530,9 @@
   max-width: 1200px;
   margin: auto;
 }
-@media (max-width: 1300px) {
+@media (max-width: 1350px) {
   .locations {
     flex-direction: column;
-  }
-}
-.sau {
-  margin-top: 20px;
-}
-@media (max-width: 1300px) {
-  .sau {
-    margin: auto;
   }
 }
 .placeholderText {
@@ -560,10 +552,10 @@
   box-shadow: 3px 4px 15px rgb(63, 64, 66);
   margin: 20px auto 10px auto;
   border-radius: 10px;
-  max-width: 1100px;
+  max-width: 1150px;
   padding: 5px;
 }
-@media (max-width: 1300px) {
+@media (max-width: 1350px) {
   .top {
     flex-direction: column;
     width: 75%;
@@ -581,9 +573,9 @@
   max-height: 300px;
   border-radius: 5px;
 }
-@media (max-width: 1300px) {
+@media (max-width: 1350px) {
   .top img {
-    max-width: 1300px;
+    max-width: 1350px;
     max-height: 550px;
     margin: -5px -5px 0px -5px;
   }
@@ -595,7 +587,7 @@
   line-height: 1.8;
   text-align: right;
 }
-@media (max-width: 1300px) {
+@media (max-width: 1350px) {
   .weather {
     margin-top: 5px;
   }
@@ -608,7 +600,7 @@
   text-align: right;
   margin-bottom: 25px;
 }
-@media (max-width: 1300px) {
+@media (max-width: 1350px) {
   .topWeather {
     text-align: left;
     margin-top: 0px;
@@ -618,7 +610,7 @@
 .bottomWeather {
   display: flex;
 }
-@media (max-width: 1300px) {
+@media (max-width: 1350px) {
   .bottomWeather {
     flex-direction: column;
   }
@@ -631,7 +623,7 @@
   margin-left: 15px;
   margin-right: 4%;
 }
-@media (max-width: 1300px) {
+@media (max-width: 1350px) {
   .datas1 {
     margin: 10px 0px 0px 0px;
   }
@@ -644,18 +636,18 @@
   margin-right: 15px;
   margin-left: 4%;
 }
-@media (max-width: 1300px) {
+@media (max-width: 1350px) {
   .datas2 {
     margin: 20px 0px 0px 0px;
   }
 }
 .city {
-  font-size: 26px;
+  font-size: 24px;
   font-weight: 600;
   line-height: 1;
   margin: 0;
 }
-@media (max-width: 1300px) {
+@media (max-width: 1350px) {
   .city {
     font-size: 24px;
   }
@@ -671,7 +663,7 @@
   margin-right: 10px;
   border-radius: 10px;
 }
-@media (max-width: 1300px) {
+@media (max-width: 1350px) {
   .weatherIcon {
     margin-right: 0px;
   }
@@ -684,7 +676,7 @@
   line-height: 2;
   padding-right: 10px;
 }
-@media (max-width: 1300px) {
+@media (max-width: 1350px) {
   .windBox {
     padding-right: 10px;
   }
@@ -695,7 +687,7 @@
   width: 100%;
   justify-content: space-between;
   margin: 10px auto 10px auto;
-  padding: 10px 10px 10px 20px;
+  padding: 10px;
   border-radius: 10px;
   line-height: 1.8;
   background: linear-gradient(#06657d, #194270, #071a37);
@@ -703,7 +695,7 @@
   color: white;
   cursor: pointer;
 }
-@media (max-width: 1300px) {
+@media (max-width: 1350px) {
   .forecast {
     flex-direction: column;
     width: 75%;
@@ -725,7 +717,7 @@
   margin-left: -10px;
   width: 110px;
 }
-@media (max-width: 1300px) {
+@media (max-width: 1350px) {
   .forecastBottom {
     justify-content: space-between;
     background: linear-gradient(0.25turn, #0e264d, #24486a, #284969);
@@ -739,11 +731,10 @@
   }
 }
 .hours {
-  font-size: 17px;
   font-weight: 600;
   margin-right: 15px;
 }
-@media (max-width: 1300px) {
+@media (max-width: 1350px) {
   .hours {
     text-align: left;
     margin-top: 5px;
@@ -756,7 +747,7 @@
   padding-right: 10px;
   padding-bottom: 5px;
 }
-@media (max-width: 1300px) {
+@media (max-width: 1350px) {
   .iconAlign {
     text-align: left;
     margin-bottom: -95px;
@@ -774,7 +765,7 @@
   width: 165.5px;
   text-align: left;
 }
-@media (max-width: 1300px) {
+@media (max-width: 1350px) {
   .day {
     padding-left: 10px;
   }
@@ -785,7 +776,7 @@
   margin: 0;
   padding-bottom: 18px;
 }
-@media (max-width: 1300px) {
+@media (max-width: 1350px) {
   .description {
     line-height: 0.8;
   }
@@ -805,7 +796,7 @@
 .line {
   display: none;
 }
-@media (max-width: 1300px) {
+@media (max-width: 1350px) {
   .line {
     display: block;
     width: 100%;
@@ -819,6 +810,7 @@
 }
 .spacing {
   line-height: 1.8;
+  width: 80px;
 }
 .dayContainer {
   display: flex;

@@ -19,5 +19,7 @@
   "thursday": "Joi",
   "friday": "Vineri",
   "saturday": "Sambata",
-  "sunday": "Duminica"
+  "sunday": "Duminica",
+  "today": "Astazi",
+  "tomorrow": "Maine"
 }

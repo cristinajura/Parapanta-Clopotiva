@@ -16,6 +16,8 @@ const HOURS = [
 ];
 
 const Forecast = ({ data }: any) => {
+  const { t } = useTranslation("weather");
+
   const [show, setShow] = React.useState(false);
   const [show1, setShow1] = React.useState(false);
   const [show2, setShow2] = React.useState(false);
@@ -26,16 +28,16 @@ const Forecast = ({ data }: any) => {
   const showOrHide2 = show2 ? "show2" : styles.hide;
   const showOrHide3 = show3 ? "show3" : styles.hide;
 
-  let isTabletOrPhone = useMediaQuery("(max-width:1300px)");
+  let isTabletOrPhone = useMediaQuery("(max-width:1350px)");
 
   const WEEK_DAY = [
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-    "Sunday",
+    t("monday"),
+    t("tuesday"),
+    t("wednesday"),
+    t("thursday"),
+    t("friday"),
+    t("saturday"),
+    t("sunday"),
   ];
 
   const dayInWeek = new Date().getDay();
@@ -60,7 +62,9 @@ const Forecast = ({ data }: any) => {
       ? HOURS.slice(5)
       : hourInDay < 20
       ? HOURS.slice(6)
-      : HOURS.slice(7);
+      : hourInDay < 23
+      ? HOURS.slice(7)
+      : HOURS;
   const currHourLength = currHour.length;
 
   return (
@@ -75,7 +79,7 @@ const Forecast = ({ data }: any) => {
             }}
           >
             <div className={styles.day}>
-              {currHour[0] !== "00:00" ? "Today" : "Tomorrow"}
+              {currHour[0] !== "00:00" ? t("today") : t("tomorrow")}
             </div>
             {!isTabletOrPhone && data ? (
               <div className={showOrHide}>
@@ -168,12 +172,16 @@ const Forecast = ({ data }: any) => {
                     <div>
                       {item.wind.speed * 3.6 >= 10
                         ? (item.wind.speed * 3.6).toPrecision(3)
+                        : item.wind.speed * 3.6 < 1
+                        ? (item.wind.speed * 3.6).toPrecision(1)
                         : (item.wind.speed * 3.6).toPrecision(2)}
                     </div>
                     <div>
                       -{" "}
                       {item.wind.gust * 3.6 >= 10
                         ? (item.wind.gust * 3.6).toPrecision(3)
+                        : item.wind.gust * 3.6 < 1
+                        ? (item.wind.gust * 3.6).toPrecision(1)
                         : (item.wind.gust * 3.6).toPrecision(2)}{" "}
                       km/h
                     </div>
@@ -224,7 +232,7 @@ const Forecast = ({ data }: any) => {
             }}
           >
             <div className={styles.day}>
-              {currHour[0] !== "00:00" ? "Tomorrow" : forecastDays[2]}
+              {currHour[0] !== "00:00" ? t("tomorrow") : forecastDays[2]}
             </div>
             {!isTabletOrPhone && data ? (
               <div className={showOrHide1}>
@@ -319,12 +327,16 @@ const Forecast = ({ data }: any) => {
                       <div>
                         {item.wind.speed * 3.6 >= 10
                           ? (item.wind.speed * 3.6).toPrecision(3)
+                          : item.wind.speed * 3.6 < 1
+                          ? (item.wind.speed * 3.6).toPrecision(1)
                           : (item.wind.speed * 3.6).toPrecision(2)}
                       </div>
                       <div>
                         -{" "}
                         {item.wind.gust * 3.6 >= 10
                           ? (item.wind.gust * 3.6).toPrecision(3)
+                          : item.wind.gust * 3.6 < 1
+                          ? (item.wind.gust * 3.6).toPrecision(1)
                           : (item.wind.gust * 3.6).toPrecision(2)}{" "}
                         km/h
                       </div>
@@ -468,12 +480,16 @@ const Forecast = ({ data }: any) => {
                       <div>
                         {item.wind.speed * 3.6 >= 10
                           ? (item.wind.speed * 3.6).toPrecision(3)
+                          : item.wind.speed * 3.6 < 1
+                          ? (item.wind.speed * 3.6).toPrecision(1)
                           : (item.wind.speed * 3.6).toPrecision(2)}
                       </div>
                       <div>
                         -{" "}
                         {item.wind.gust * 3.6 >= 10
                           ? (item.wind.gust * 3.6).toPrecision(3)
+                          : item.wind.gust * 3.6 < 1
+                          ? (item.wind.gust * 3.6).toPrecision(1)
                           : (item.wind.gust * 3.6).toPrecision(2)}{" "}
                         km/h
                       </div>
@@ -617,12 +633,16 @@ const Forecast = ({ data }: any) => {
                       <div>
                         {item.wind.speed * 3.6 >= 10
                           ? (item.wind.speed * 3.6).toPrecision(3)
+                          : item.wind.speed * 3.6 < 1
+                          ? (item.wind.speed * 3.6).toPrecision(1)
                           : (item.wind.speed * 3.6).toPrecision(2)}
                       </div>
                       <div>
                         -{" "}
                         {item.wind.gust * 3.6 >= 10
                           ? (item.wind.gust * 3.6).toPrecision(3)
+                          : item.wind.gust * 3.6 < 1
+                          ? (item.wind.gust * 3.6).toPrecision(1)
                           : (item.wind.gust * 3.6).toPrecision(2)}{" "}
                         km/h
                       </div>
@@ -670,7 +690,7 @@ const TextDetails = () => {
   const { t } = useTranslation("weather");
 
   return (
-    <div style={{ textAlign: "left" }}>
+    <div style={{ textAlign: "left", width: "200px" }}>
       <div>{t("temp")}</div>
       <div>
         <div>{t("tempFelt")}</div>

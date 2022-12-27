@@ -8,11 +8,15 @@ const CurrentWeather = ({ data }: any) => {
   const wind =
     data?.wind?.speed * 3.6 >= 10
       ? (data?.wind?.speed * 3.6).toPrecision(3)
+      : data?.wind.speed * 3.6 < 1
+      ? (data?.wind.speed * 3.6).toPrecision(1)
       : (data?.wind?.speed * 3.6).toPrecision(2);
 
   const gust =
     data?.wind?.gust * 3.6 >= 10
       ? (data?.wind?.gust * 3.6).toPrecision(3)
+      : data?.wind.gust * 3.6 < 1
+      ? (data?.wind.gust * 3.6).toPrecision(1)
       : (data?.wind?.gust * 3.6).toPrecision(2);
 
   return (
