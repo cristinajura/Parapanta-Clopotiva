@@ -1,0 +1,23 @@
+{
+  "searchLoc": "Cauta locatia...",
+  "windDir": "Directia vantului",
+  "deg": "(grade)",
+  "speed": "Viteza vantului",
+  "gust": "Rafale",
+  "temp": "Temperatura",
+  "tempFelt": "Temp. resimtita",
+  "press": "Presiunea",
+  "sea": "(niv. marii)",
+  "ground": "(niv. solului)",
+  "humidity": "Umiditate relativa",
+  "clouds": "Nori",
+  "prec": "Precipitatii",
+  "prob": "Probabilitatea prec.",
+  "monday": "Luni",
+  "tuesday": "Marti",
+  "wednesday": "Miercuri",
+  "thursday": "Joi",
+  "friday": "Vineri",
+  "saturday": "Sambata",
+  "sunday": "Duminica"
+}

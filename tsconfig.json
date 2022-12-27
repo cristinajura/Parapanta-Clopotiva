@@ -15,6 +15,15 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "components/weather/CurrentWeather.tsx",
+    "components/weather/Forecast.tsx",
+    "components/weather/SearchLocation.tsx",
+    "components/weather/Search.tsx",
+    "pages/weatherForecast.tsx"
+  ],
   "exclude": ["node_modules"]
 }

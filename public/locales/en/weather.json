@@ -1,0 +1,23 @@
+{
+  "searchLoc": "Search location...",
+  "windDir": "Wind direction",
+  "deg": "(deg)",
+  "speed": "Wind speed",
+  "gust": "Gust",
+  "temp": "Temperature",
+  "tempFelt": "Temperature felt",
+  "press": "Pressure",
+  "sea": "(sea level)",
+  "ground": "(ground level)",
+  "humidity": "Relative humidity",
+  "clouds": "Clouds",
+  "prec": "Precipitation",
+  "prob": "Precipitation probability",
+  "monday": "Monday",
+  "tuesday": "Tuesday",
+  "wednesday": "Wednesday",
+  "thursday": "Thursday",
+  "friday": "Friday",
+  "saturday": "Saturday",
+  "sunday": "Sunday"
+}
