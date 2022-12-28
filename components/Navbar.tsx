@@ -114,25 +114,10 @@ const TopNav: FC = () => {
                   {t("navAboutus")}
                 </Link>
               </li>
-              {/* <li key={6}>
-                <Link className={styles.navLink} href="/weatherForecast">
-                  {t("navWeather")}
-                </Link>
-              </li> */}
               <li key={6}>
                 <Link className={styles.navLink} href="/contact">
                   {t("navContact")}
                 </Link>
-                <div
-                  className={styles.hideMenu}
-                  style={{
-                    width: "100%",
-                    height: "1.5px",
-                    boxShadow: "0 0 0 0",
-                  }}
-                >
-                  <div className={styles.orangeLine}></div>
-                </div>
               </li>
             </ul>
           </div>
