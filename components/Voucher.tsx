@@ -28,7 +28,7 @@ const Voucher: FC<Props> = ({ voucherTitle, voucherText1, voucherBtn }) => {
         data-aos-offset="200"
       >
         <img
-          src="https://live.staticflickr.com/65535/52539617838_6fc8655bfc_c.jpg"
+          src="https://live.staticflickr.com/65535/52591506930_5e1765cf98_c.jpg"
           alt="Voucher Paragliding Clopotiva"
         />
       </div>

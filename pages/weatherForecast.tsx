@@ -8,11 +8,17 @@ import "animate.css";
 import CurrentWeather from "../components/weather/CurrentWeather";
 import Forecast from "../components/weather/Forecast";
 import SearchLocation from "../components/weather/SearchLocation";
-import { WEATHER_API_URL, WEATHER_API_KEY } from "../components/helpers/api";
+import { WEATHER_API_URL, WEATHER_API_KEY } from "../api";
 import styles from "../styles/Home.module.css";
 
 const Weather = () => {
-  const { t } = useTranslation(["common", "nav", "weather", "footer"]);
+  const { t } = useTranslation([
+    "common",
+    "nav",
+    "weather",
+    "locations",
+    "footer",
+  ]);
 
   const [currentWeather, setCurrentWeather] = React.useState(null);
   const [forecast, setForecast] = React.useState(null);
@@ -69,6 +75,7 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => ({
       "common",
       "nav",
       "weather",
+      "locations",
       "footer",
     ])),
   },

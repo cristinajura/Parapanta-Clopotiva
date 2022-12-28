@@ -78,7 +78,7 @@ const TopNav: FC = () => {
                     border: "none",
                     fontSize: "20px",
                     marginTop: "-3px",
-                    background: "white",
+                    padding: "4.5px",
                   }}
                   onClick={() => setMenu(!menu)}
                 >
@@ -139,7 +139,7 @@ const TopNav: FC = () => {
         </div>
       </nav>
       <button
-        className={styles.laguageBtn}
+        className={styles.languageBtn}
         onClick={() => tonggleLanguage(changeTo)}
       >
         {t("common:changeLanguageBtn")}

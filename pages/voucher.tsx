@@ -23,7 +23,7 @@ const PVoucher = () => {
           </div>
           <p>{t("voucherText1")}</p>
           <img
-            src="https://live.staticflickr.com/65535/52539617838_6fc8655bfc_c.jpg"
+            src="https://live.staticflickr.com/65535/52591506930_5e1765cf98_c.jpg"
             alt="Voucher Parapanta Clopotiva"
           />
           <p style={{ marginTop: "-5px" }}>{t("voucher:voucherText2")}</p>

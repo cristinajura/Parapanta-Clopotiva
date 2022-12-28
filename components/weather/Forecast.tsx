@@ -48,9 +48,7 @@ const Forecast = ({ data }: any) => {
 
   const hourInDay = new Date().getHours();
   const currHour =
-    hourInDay < 2
-      ? HOURS.slice(0)
-      : hourInDay < 5
+    hourInDay < 5
       ? HOURS.slice(1)
       : hourInDay < 8
       ? HOURS.slice(2)
@@ -79,7 +77,10 @@ const Forecast = ({ data }: any) => {
             }}
           >
             <div className={styles.day}>
-              {currHour[0] !== "00:00" ? t("today") : t("tomorrow")}
+              {currHour[0] !== "00:00" ||
+              (currHour[0] === "00:00" && hourInDay < 2)
+                ? t("today")
+                : t("tomorrow")}
             </div>
             {!isTabletOrPhone && data ? (
               <div className={showOrHide}>
@@ -232,7 +233,10 @@ const Forecast = ({ data }: any) => {
             }}
           >
             <div className={styles.day}>
-              {currHour[0] !== "00:00" ? t("tomorrow") : forecastDays[2]}
+              {currHour[0] !== "00:00" ||
+              (currHour[0] === "00:00" && hourInDay < 2)
+                ? t("tomorrow")
+                : forecastDays[2]}
             </div>
             {!isTabletOrPhone && data ? (
               <div className={showOrHide1}>

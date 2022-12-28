@@ -28,7 +28,7 @@ const PTandems = () => {
             <div className={styles.title}>{t("tandemTitle")}</div>
           </div>
           <img
-            src="https://live.staticflickr.com/65535/52532199999_3e53b7dbb7.jpg"
+            src="https://live.staticflickr.com/65535/52591078091_8c05eee054.jpg"
             alt="Tandem flying at Clopotiva site"
           />
           <p>{t("tandemText1")}</p>
