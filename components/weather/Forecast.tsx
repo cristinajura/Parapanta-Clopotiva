@@ -48,7 +48,9 @@ const Forecast = ({ data }: any) => {
 
   const hourInDay = new Date().getHours();
   const currHour =
-    hourInDay < 5
+    hourInDay < 2
+      ? HOURS
+      : hourInDay < 5
       ? HOURS.slice(1)
       : hourInDay < 8
       ? HOURS.slice(2)
@@ -390,7 +392,11 @@ const Forecast = ({ data }: any) => {
               justifyContent: "space-between",
             }}
           >
-            <div className={styles.day}>{forecastDays[2]}</div>
+            <div className={styles.day}>
+              {currHour[0] === "00:00" && hourInDay === 23
+                ? forecastDays[3]
+                : forecastDays[2]}
+            </div>
             {!isTabletOrPhone && data ? (
               <div className={showOrHide2}>
                 <TextDetails />
@@ -543,7 +549,11 @@ const Forecast = ({ data }: any) => {
               justifyContent: "space-between",
             }}
           >
-            <div className={styles.day}>{forecastDays[3]}</div>
+            <div className={styles.day}>
+              {currHour[0] === "00:00" && hourInDay === 23
+                ? forecastDays[4]
+                : forecastDays[3]}
+            </div>
             {!isTabletOrPhone && data ? (
               <div className={showOrHide3}>
                 <TextDetails />
