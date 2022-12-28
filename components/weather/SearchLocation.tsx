@@ -72,6 +72,14 @@ const SearchLocation = ({ onSearchChange }: any) => {
       value: "46.587136 23.686606",
       label: t("locPetresti"),
     },
+    {
+      value: "45.700859 23.976794",
+      label: t("locValare"),
+    },
+    {
+      value: "45.669151 24.164310",
+      label: t("locTocile"),
+    },
   ];
 
   const [searchLocation, setSearchLocation] = React.useState(null);
