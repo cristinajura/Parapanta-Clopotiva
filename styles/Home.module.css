@@ -8,7 +8,6 @@
   --button-shadow: 3px 3px rgb(147, 146, 146);
   --contact-color: rgb(48, 72, 87);
   --tel-button: rgb(59, 113, 142);
-  --on-hover: rgb(62, 127, 187);
   --buttons: rgb(222, 230, 239);
   --title-color: rgb(133, 131, 131);
   font-family: "Poppins", sans-serif;
@@ -122,7 +121,7 @@
   text-decoration: none;
 }
 .navLink:hover {
-  color: var(--on-hover);
+  color: rgb(34, 101, 164);
 }
 .languageBtn {
   width: 50px;
@@ -147,6 +146,9 @@
     margin-left: 2px;
     left: 0;
   }
+}
+.languageBtn:hover {
+  background: #094b72;
 }
 
 .homeBackground {
@@ -834,4 +836,7 @@
   text-decoration: none;
   color: white;
   cursor: pointer;
+}
+.weatherButton:hover {
+  background: #094b72;
 }
