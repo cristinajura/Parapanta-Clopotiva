@@ -21,6 +21,10 @@ const SearchLocation = ({ onSearchChange }: any) => {
       label: t("locRetezat"),
     },
     {
+      value: "45.859838 23.042844",
+      label: t("locUroi"),
+    },
+    {
       value: "45.554008 22.973854",
       label: t("locCiopeia"),
     },
@@ -31,10 +35,6 @@ const SearchLocation = ({ onSearchChange }: any) => {
     {
       value: "45.734482 23.037333",
       label: t("locCalan"),
-    },
-    {
-      value: "45.859838 23.042844",
-      label: t("locUroi"),
     },
     {
       value: "45.388145 23.491146",
@@ -79,6 +79,10 @@ const SearchLocation = ({ onSearchChange }: any) => {
     {
       value: "45.669151 24.164310",
       label: t("locTocile"),
+    },
+    {
+      value: "46.265842 21.655047",
+      label: t("locSiria"),
     },
   ];
 

@@ -78,11 +78,14 @@ const Forecast = ({ data }: any) => {
               justifyContent: "space-between",
             }}
           >
-            <div className={styles.day}>
-              {currHour[0] !== "00:00" ||
-              (currHour[0] === "00:00" && hourInDay < 2)
-                ? t("today")
-                : t("tomorrow")}
+            <div className={styles.dayDate}>
+              <div className={styles.day}>
+                {currHour[0] !== "00:00" ||
+                (currHour[0] === "00:00" && hourInDay < 2)
+                  ? t("today")
+                  : t("tomorrow")}
+              </div>
+              <div>{data?.list[0].dt_txt.slice(0, 10)}</div>
             </div>
             {!isTabletOrPhone && data ? (
               <div className={showOrHide}>
@@ -234,11 +237,14 @@ const Forecast = ({ data }: any) => {
               justifyContent: "space-between",
             }}
           >
-            <div className={styles.day}>
-              {currHour[0] !== "00:00" ||
-              (currHour[0] === "00:00" && hourInDay < 2)
-                ? t("tomorrow")
-                : forecastDays[2]}
+            <div className={styles.dayDate}>
+              <div className={styles.day}>
+                {currHour[0] !== "00:00" ||
+                (currHour[0] === "00:00" && hourInDay < 2)
+                  ? t("tomorrow")
+                  : forecastDays[2]}
+              </div>
+              <div>{data?.list[currHourLength].dt_txt.slice(0, 10)}</div>
             </div>
             {!isTabletOrPhone && data ? (
               <div className={showOrHide1}>
@@ -392,10 +398,13 @@ const Forecast = ({ data }: any) => {
               justifyContent: "space-between",
             }}
           >
-            <div className={styles.day}>
-              {currHour[0] === "00:00" && hourInDay === 23
-                ? forecastDays[3]
-                : forecastDays[2]}
+            <div className={styles.dayDate}>
+              <div className={styles.day}>
+                {currHour[0] === "00:00" && hourInDay === 23
+                  ? forecastDays[3]
+                  : forecastDays[2]}
+              </div>
+              <div>{data?.list[currHourLength + 8].dt_txt.slice(0, 10)}</div>
             </div>
             {!isTabletOrPhone && data ? (
               <div className={showOrHide2}>
@@ -549,10 +558,13 @@ const Forecast = ({ data }: any) => {
               justifyContent: "space-between",
             }}
           >
-            <div className={styles.day}>
-              {currHour[0] === "00:00" && hourInDay === 23
-                ? forecastDays[4]
-                : forecastDays[3]}
+            <div className={styles.dayDate}>
+              <div className={styles.day}>
+                {currHour[0] === "00:00" && hourInDay === 23
+                  ? forecastDays[4]
+                  : forecastDays[3]}
+              </div>
+              <div>{data?.list[currHourLength + 16].dt_txt.slice(0, 10)}</div>
             </div>
             {!isTabletOrPhone && data ? (
               <div className={showOrHide3}>

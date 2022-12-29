@@ -768,9 +768,18 @@
   width: 165.5px;
   text-align: left;
 }
-@media (max-width: 1350px) {
-  .day {
-    padding-left: 10px;
+.dayDate {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+  font-size: 14px;
+  text-align: left;
+}
+@media (max-width: 1300px) {
+  .dayDate {
+    margin-left: 10px;
+    margin-bottom: 5px;
+    font-size: 12px;
   }
 }
 .description {
