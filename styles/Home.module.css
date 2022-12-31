@@ -52,11 +52,6 @@
   border-bottom: 1px solid rgb(205, 204, 204);
   font-family: "Poppins", sans-serif;
 }
-@media (max-width: 450px) {
-  .topNav {
-    height: auto;
-  }
-}
 .navBox {
   display: flex;
   justify-content: flex-end;
@@ -850,6 +845,12 @@
   text-decoration: none;
   color: white;
   cursor: pointer;
+}
+@media (max-width: 450px) {
+  .weatherButton a {
+    font-size: 16px;
+    margin-top: 56px;
+  }
 }
 .weatherButton:hover {
   background: #094b72;
