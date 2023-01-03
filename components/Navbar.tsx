@@ -59,7 +59,7 @@ const TopNav: FC = () => {
         <button className={styles.weatherButton}>
           <Link href="/weatherForecast">{t("navWeather")}</Link>
           <img
-            src="./logo.png"
+            src="https://live.staticflickr.com/65535/52555206343_6f2ce910cc_w.jpg"
             alt="Parapanta Clopotiva Logo"
           />
         </button>
