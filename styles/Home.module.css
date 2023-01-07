@@ -134,7 +134,7 @@
   z-index: 30;
   top: 0;
   position: fixed;
-  background: #06344e;
+  background: rgb(30, 58, 78);
   color: white;
   border: none;
   border-radius: 3px;
@@ -194,7 +194,7 @@
   width: 50%;
   height: auto;
   border-radius: 10px;
-  box-shadow: 0px 0px 15px 5px rgb(167, 168, 169);
+  box-shadow: 0px 0px 15px 3px rgb(167, 168, 169);
 }
 @media (max-width: 1350px) {
   .cardContainer {
@@ -562,7 +562,7 @@
   text-align: left;
 }
 .palceholderIcon {
-  margin-bottom: -28px;
+  margin-bottom: -24px;
   text-align: left;
 }
 
@@ -846,9 +846,9 @@
 }
 
 .weatherButton {
-  width: 100px;
+  width: 85px;
   height: 45px;
-  background: #06344e;
+  background: rgb(30, 58, 78);
   border: none;
   border-radius: 3px;
   margin-left: 0.5px;
