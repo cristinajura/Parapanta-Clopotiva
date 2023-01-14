@@ -41,7 +41,7 @@ const TopNav: FC = () => {
   const [listening, setListening] = React.useState(false);
   const [menu, setMenu] = React.useState(false);
 
-  let isTabletOrPhone = useMediaQuery("(min-width:951px)");
+  let isTabletOrPhone = useMediaQuery("(min-width:1151px)");
   const showIcon = menu ? { display: "none" } : { display: "block" };
   const showMenu = isTabletOrPhone
     ? { display: "block" }
@@ -56,13 +56,7 @@ const TopNav: FC = () => {
   return (
     <div>
       <nav className={styles.topNav}>
-        <button className={styles.weatherButton}>
-          <Link href="/weatherForecast">{t("navWeather")}</Link>
-          <img
-            src="https://live.staticflickr.com/65535/52555206343_6f2ce910cc_w.jpg"
-            alt="Parapanta Clopotiva Logo"
-          />
-        </button>
+        <img src="/ursNav.png" alt="Parapanta Clopotiva Logo" />
         <div ref={menuRef} style={{ display: "flex", flexDirection: "column" }}>
           <div style={showIcon}>
             <button className={styles.hideMenu} onClick={() => setMenu(!menu)}>
@@ -86,7 +80,7 @@ const TopNav: FC = () => {
                 </button>
                 <div
                   className={styles.orangeLine}
-                  style={{ marginTop: "10px" }}
+                  style={{ marginTop: "20px" }}
                 ></div>
               </li>
               <li key={1}>
@@ -115,6 +109,11 @@ const TopNav: FC = () => {
                 </Link>
               </li>
               <li key={6}>
+                <Link className={styles.navLink} href="/weatherForecast">
+                  {t("navWeather")}
+                </Link>
+              </li>
+              <li key={7}>
                 <Link className={styles.navLink} href="/contact">
                   {t("navContact")}
                 </Link>

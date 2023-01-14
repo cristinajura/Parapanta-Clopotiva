@@ -21,7 +21,7 @@ const CurrentWeather = ({ data }: any) => {
 
   return (
     <div className={styles.top}>
-      <img src="../958395724.jpg" alt="Clopotiva take-off" />
+      <img src="../paragliding.jpg" alt="Clopotiva take-off" />
       {data ? (
         <div className={styles.weather}>
           <div className={styles.topWeather}>
