@@ -3,13 +3,13 @@
 
 .container {
   scroll-behavior: smooth;
-  --main-gray: rgb(242, 249, 254);
+  --main-gray: rgb(227, 233, 240);
   --border-graycontainer: 2px solid rgb(243, 247, 251);
   --footer-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
   --button-shadow: 3px 3px rgb(147, 146, 146);
   --contact-color: rgb(48, 72, 87);
   --tel-button: rgb(59, 113, 142);
-  --buttons: rgb(222, 230, 239);
+  --buttons: rgb(224, 231, 240);
   --title-color: rgb(133, 131, 131);
   font-family: "Poppins", sans-serif;
   top: 0;
@@ -196,7 +196,7 @@
   width: 50%;
   height: auto;
   border-radius: 10px;
-  box-shadow: 0px 0px 15px 3px rgb(199, 200, 200);
+  box-shadow: 0px 0px 10px 3px rgb(214, 214, 214);
 }
 @media (max-width: 1350px) {
   .cardContainer {
@@ -219,11 +219,9 @@
   }
 }
 .cardContainer img {
-  animation: fadeBackground 6s;
-  animation-fill-mode: forwards;
   width: 94%;
   height: auto;
-  box-shadow: 0 0 15px 2px rgb(128, 127, 127);
+  box-shadow: 0 0 8px 2px rgb(179, 178, 178);
   margin-top: 18px;
   margin-bottom: 10px;
 }
@@ -536,7 +534,7 @@
 .search {
   width: 400px;
   margin: 10px auto;
-  box-shadow: 3px 4px 10px rgb(63, 64, 66);
+  box-shadow: 2px 3px 5px rgb(96, 96, 99);
 }
 @media (max-width: 1350px) {
   .search {
@@ -572,7 +570,7 @@
   display: flex;
   justify-content: space-between;
   background: linear-gradient(#06344e, #054c75, #011738);
-  box-shadow: 3px 4px 15px rgb(63, 64, 66);
+  box-shadow: 2px 3px 10px rgb(63, 64, 66);
   margin: 20px auto 10px auto;
   border-radius: 5px;
   max-width: 1150px;
@@ -603,8 +601,35 @@
     margin: -5px -5px 0px -5px;
   }
 }
+.windmapA {
+  text-decoration: none;
+  color: #fff;
+  display: flex;
+  justify-content: flex-end;
+  margin-left: -90px;
+  margin-top: 280px;
+}
+@media (max-width: 1350px) {
+  .windmapA {
+    margin-top: -15px;
+    margin-left: 0;
+  }
+}
+.windmapText {
+  font-size: 12px;
+  text-shadow: 1px 2px 1px black;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+@media (max-width: 1350px) {
+  .windmapText {
+    margin-top: -5px;
+    margin-left: 10px;
+    margin-right: 0;
+  }
+}
 .weather {
-  width: 100%;
+  width: 600px;
   color: white;
   border-radius: 5px;
   line-height: 1.8;
@@ -613,6 +638,7 @@
 @media (max-width: 1350px) {
   .weather {
     margin-top: 5px;
+    width: 100%;
   }
 }
 .topWeather {
@@ -713,7 +739,7 @@
   border-radius: 5px;
   line-height: 1.8;
   background: linear-gradient(#06657d, #194270, #071a37);
-  box-shadow: 3px 4px 15px rgb(63, 64, 66);
+  box-shadow: 2px 3px 10px rgb(63, 64, 66);
   color: white;
   cursor: pointer;
 }

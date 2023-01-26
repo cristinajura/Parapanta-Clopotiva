@@ -20,8 +20,23 @@ const CurrentWeather = ({ data }: any) => {
       : (data?.wind?.gust * 3.6).toPrecision(2);
 
   return (
-    <div className={styles.top}>
+    <div
+      className={styles.top}
+      style={data ? { maxWidth: "1150px" } : { maxWidth: "550px" }}
+    >
       <img src="../paragliding.jpg" alt="Clopotiva take-off" />
+      <a
+        href="https://www.windmap.store/"
+        target="_blank"
+        className={styles.windmapA}
+      >
+        <img
+          src="../windmap.png"
+          alt="windmap logo"
+          style={{ width: "20px", height: "20px" }}
+        />
+        <div className={styles.windmapText}>windmap</div>
+      </a>
       {data ? (
         <div className={styles.weather}>
           <div className={styles.topWeather}>
