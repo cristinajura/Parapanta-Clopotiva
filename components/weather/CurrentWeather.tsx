@@ -27,7 +27,7 @@ const CurrentWeather = ({ data }: any) => {
       <img src="../paragliding.jpg" alt="Clopotiva take-off" />
       <a
         href="https://www.windmap.store/"
-        target="_blank"
+        target="blank"
         className={styles.windmapA}
       >
         <img
