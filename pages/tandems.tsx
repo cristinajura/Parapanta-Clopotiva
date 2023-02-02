@@ -76,23 +76,8 @@ const PTandems = () => {
             />
           </div>
           <p>{t("tandemText5")}</p>
-          <div
-            data-aos="fade-down"
-            data-aos-duration="1000"
-            data-aos-easing="ease-in-out"
-            data-aos-once="true"
-            data-aos-offset="200"
-          >
-            <img
-              src="https://live.staticflickr.com/65535/52531919041_93e59ef6c5.jpg"
-              alt="Tandem paragliding in Romania, Clopotiva"
-            />
-          </div>
-          <p style={{ marginTop: "-5px" }}>{t("tandemText6")}</p>
-          <p style={{ marginTop: "-10px" }}>{t("tandemText7")}</p>
-          <p style={{ marginTop: "-10px" }}>{t("tandemText8")}</p>
           <p style={{ marginTop: "40px", marginBottom: "-25px" }}>
-            {t("tandenText9")}
+            {t("tandemText9")}
           </p>
           <div style={{ display: "flex", justifyContent: "center" }}>
             <button className={styles.telBtn}>
