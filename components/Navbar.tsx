@@ -124,9 +124,20 @@ const TopNav: FC = () => {
       </nav>
       <button
         className={styles.languageBtn}
+        style={
+          changeTo === "en"
+            ? {
+                background:
+                  "linear-gradient(0.25turn, #678da2, #678da2, #678da2, #011740, #011740, #011740)",
+              }
+            : {
+                background:
+                  "linear-gradient(0.25turn, #011740,  #011740, #011740, #678da2, #678da2, #678da2)",
+              }
+        }
         onClick={() => tonggleLanguage(changeTo)}
       >
-        {t("common:changeLanguageBtn")}
+        EN | RO
       </button>
     </div>
   );
