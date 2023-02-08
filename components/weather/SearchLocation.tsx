@@ -122,10 +122,7 @@ const SearchLocation = ({ onSearchChange }: any) => {
     },
   ];
 
-  const [searchLocation, setSearchLocation] = React.useState(null);
-
   const handleChange = (selectSpot: any) => {
-    setSearchLocation(selectSpot);
     onSearchChange(selectSpot);
   };
 
@@ -140,7 +137,7 @@ const SearchLocation = ({ onSearchChange }: any) => {
         </div>
       }
       options={options}
-      value={"Location search..."}
+      value={""}
       onChange={handleChange}
     />
   );

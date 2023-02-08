@@ -20,6 +20,33 @@ const Weather = () => {
     "footer",
   ]);
 
+  const [iniCurrentWeather, setIniCurrentWeather] = React.useState(null);
+  const [iniForecast, setIniForecast] = React.useState(null);
+
+  React.useEffect(() => {
+    fetch(
+      `${WEATHER_API_URL}/weather?lat=45.472222&lon=22.810797&appid=${WEATHER_API_KEY}&units=metric`
+    ).then(async (response) => {
+      const data = await response.json();
+      setIniCurrentWeather({
+        city: "Clopotiva Take-off",
+        ...data,
+      });
+    });
+  }, []);
+
+  React.useEffect(() => {
+    fetch(
+      `${WEATHER_API_URL}/forecast?lat=45.472222&lon=22.810797&appid=${WEATHER_API_KEY}&units=metric`
+    ).then(async (response) => {
+      const data = await response.json();
+      setIniForecast({
+        city: "Clopotiva Take-off",
+        ...data,
+      });
+    });
+  }, []);
+
   const [currentWeather, setCurrentWeather] = React.useState(null);
   const [forecast, setForecast] = React.useState(null);
 
@@ -60,8 +87,10 @@ const Weather = () => {
               <SearchLocation onSearchChange={handleLocationChange} />
             </div>
           </div>
-          <CurrentWeather data={currentWeather} />
-          <Forecast data={forecast} />
+          <CurrentWeather
+            data={currentWeather === null ? iniCurrentWeather : currentWeather}
+          />
+          <Forecast data={forecast === null ? iniForecast : forecast} />
         </div>
       </div>
       <Footer />
