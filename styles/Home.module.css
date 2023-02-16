@@ -142,9 +142,9 @@
 }
 @media (max-width: 1150px) {
   .languageBtn {
-    margin-left: 0.5px;
-    margin-top: 73px;
+    transform: scale(0.9);
     left: 0;
+    margin-left: 0;
   }
 }
 
@@ -482,12 +482,12 @@
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  background: rgb(22, 206, 22);
+  background: rgb(20, 190, 20);
   position: fixed;
   font-size: 44px;
   margin-left: 90vw;
   margin-bottom: 5vh;
-  border: 3px solid rgb(2, 188, 18);
+  border: 3px solid rgb(2, 198, 19);
   bottom: 0;
   z-index: 20;
 }
@@ -498,7 +498,8 @@
 }
 @media (max-width: 600px) {
   .whatsapp {
-    display: none;
+    transform: scale(0.8);
+    margin-left: 80vw;
   }
 }
 

@@ -10,45 +10,49 @@ import Forecast from "../components/weather/Forecast";
 import SearchLocation from "../components/weather/SearchLocation";
 import { WEATHER_API_URL, WEATHER_API_KEY } from "../api";
 import styles from "../styles/Home.module.css";
+import Whatsapp from "../components/Whatsapp";
 
 const Weather = () => {
   const { t } = useTranslation([
+    "locations",
     "common",
     "nav",
     "weather",
-    "locations",
     "footer",
   ]);
 
   const [iniCurrentWeather, setIniCurrentWeather] = React.useState(null);
   const [iniForecast, setIniForecast] = React.useState(null);
+  const [currentWeather, setCurrentWeather] = React.useState(null);
+  const [forecast, setForecast] = React.useState(null);
 
   React.useEffect(() => {
     fetch(
       `${WEATHER_API_URL}/weather?lat=45.472222&lon=22.810797&appid=${WEATHER_API_KEY}&units=metric`
-    ).then(async (response) => {
-      const data = await response.json();
-      setIniCurrentWeather({
-        city: "Clopotiva Take-off",
-        ...data,
-      });
-    });
+    )
+      .then(async (response) => {
+        const data = await response.json();
+        setIniCurrentWeather({
+          city: t("locClopoTakeoff"),
+          ...data,
+        });
+      })
+      .catch((err) => console.log(err));
   }, []);
 
   React.useEffect(() => {
     fetch(
       `${WEATHER_API_URL}/forecast?lat=45.472222&lon=22.810797&appid=${WEATHER_API_KEY}&units=metric`
-    ).then(async (response) => {
-      const data = await response.json();
-      setIniForecast({
-        city: "Clopotiva Take-off",
-        ...data,
-      });
-    });
+    )
+      .then(async (response) => {
+        const data = await response.json();
+        setIniForecast({
+          city: t("locClopoTakeoff"),
+          ...data,
+        });
+      })
+      .catch((err) => console.log(err));
   }, []);
-
-  const [currentWeather, setCurrentWeather] = React.useState(null);
-  const [forecast, setForecast] = React.useState(null);
 
   const handleLocationChange = (options: any) => {
     const [lat, lon] = options.value.split(" ");
@@ -81,6 +85,7 @@ const Weather = () => {
     <div className="animate__animated animate__fadeIn">
       <TopNav />
       <div className={styles.container} style={{ marginTop: "6.5rem" }}>
+        <Whatsapp />
         <div className={styles.weatherContainer}>
           <div className={styles.locations}>
             <div className={styles.search}>
@@ -101,10 +106,10 @@ const Weather = () => {
 export const getStaticProps: GetStaticProps = async ({ locale }) => ({
   props: {
     ...(await serverSideTranslations(locale ?? "en", [
+      "locations",
       "common",
       "nav",
       "weather",
-      "locations",
       "footer",
     ])),
   },

@@ -56,7 +56,7 @@ const TopNav: FC = () => {
   return (
     <div>
       <nav className={styles.topNav}>
-        <img src="/ursNav.png" alt="Parapanta Clopotiva Logo" />
+        <img src="/logo.png" alt="Parapanta Clopotiva Logo" />
         <div ref={menuRef} style={{ display: "flex", flexDirection: "column" }}>
           <div style={showIcon}>
             <button className={styles.hideMenu} onClick={() => setMenu(!menu)}>
