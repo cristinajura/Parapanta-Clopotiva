@@ -5,5 +5,7 @@
   "contactTel": "Telephone number",
   "contactOptional": "(optional)",
   "contactText": "Enter your message *",
-  "contactBtn": "Send"
+  "contactBtn": "Send",
+  "contactSuccess": "Thank you for your message! We will contact you shortly.",
+  "contactError": "Oops, the message was not sent! Please try again."
 }

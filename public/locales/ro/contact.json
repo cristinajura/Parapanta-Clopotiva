@@ -5,5 +5,7 @@
   "contactTel": "Telefon",
   "contactOptional": "(optional)",
   "contactText": "Introdu mesajul *",
-  "contactBtn": "Trimite"
+  "contactBtn": "Trimite",
+  "contactSuccess": "Va multumim pentru mesaj! O sa va contactam in cel mai scurt timp.",
+  "contactError": "Oops, mesajul nu a fost trimis! Va rugam sa incercati din nou."
 }

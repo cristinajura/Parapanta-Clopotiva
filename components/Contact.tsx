@@ -1,22 +1,64 @@
-import React from "react";
+import React, { useState } from "react";
 import { useTranslation } from "next-i18next";
 import styles from "../styles/Home.module.css";
 import type { FC } from "react";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import { useSnackbar } from "notistack";
+
+const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
 const Contact: FC = () => {
   const { t } = useTranslation("contact");
-
   let isTabletOrPhone = useMediaQuery("(min-width:800px)");
+  const { enqueueSnackbar } = useSnackbar();
+
+  const [first, setFirst] = useState("");
+  const [last, setLast] = useState("");
+  const [nickname, setNickname] = useState("");
+  const [telephone, setTelephone] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+    const data = { first, last, nickname, email, telephone, message };
+
+    if (
+      nickname === "" &&
+      first !== "" &&
+      last !== "" &&
+      email.match(mailformat) &&
+      message !== ""
+    ) {
+      fetch("/api/secureContactForm", {
+        method: "POST",
+        headers: {
+          Accept: "application/json, text/plain, */*",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      }).then((res) => {
+        if (res.status === 200) {
+          enqueueSnackbar(t("contactSuccess"), { variant: "success" });
+          setFirst("");
+          setLast("");
+          setNickname("");
+          setEmail("");
+          setTelephone("");
+          setMessage("");
+        }
+      });
+    } else {
+      enqueueSnackbar(t("contactError"), {
+        variant: "info",
+      });
+    }
+  };
 
   return (
     <div className={styles.contactPage}>
       <div className={styles.contactBox}>
-        <form
-          action="mailto:parapanta.transilvania@gmail.com"
-          method="post"
-          encType="text/plain"
-        >
+        <form>
           <div>
             <div
               style={
@@ -33,25 +75,48 @@ const Contact: FC = () => {
               }
             >
               <div style={{ display: "flex", flexDirection: "column" }}>
-                <label htmlFor="first-name">{t("contactFirstName")}</label>
+                <label htmlFor="first">{t("contactFirstName")}</label>
                 <input
                   className={styles.formInput}
-                  type="text"
-                  id="first-name"
-                  name="first-name"
                   required
+                  type="text"
+                  id="first"
+                  name="first"
+                  onChange={(e) => {
+                    setFirst(e.target.value);
+                  }}
+                  value={first}
                 />
               </div>
               <div style={{ display: "flex", flexDirection: "column" }}>
-                <label htmlFor="last-name">{t("contactLastName")}</label>
+                <label htmlFor="last">{t("contactLastName")}</label>
                 <input
                   className={styles.formInput}
-                  type="text"
-                  id="last-name"
-                  name="last-name"
                   required
+                  type="text"
+                  id="last"
+                  name="last"
+                  onChange={(e) => {
+                    setLast(e.target.value);
+                  }}
+                  value={last}
                 />
               </div>
+            </div>
+            <div>
+              <label htmlFor="nickname" className={styles.hide}>
+                Nickname
+              </label>
+              <input
+                type="text"
+                name="nickname"
+                id="nickname"
+                className={styles.hide}
+                onChange={(e) => {
+                  setNickname(e.target.value);
+                }}
+                value={nickname}
+              />
             </div>
             <div
               style={
@@ -71,14 +136,18 @@ const Contact: FC = () => {
                 <label htmlFor="email">{t("contactEmail")}</label>
                 <input
                   className={styles.formInput}
+                  required
                   type="email"
                   id="email"
                   name="email"
-                  required
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                  }}
+                  value={email}
                 />
               </div>
               <div style={{ display: "flex", flexDirection: "column" }}>
-                <label htmlFor="last-name">
+                <label htmlFor="telephone">
                   {t("contactTel")}
                   <small> {t("contactOptional")}</small>
                 </label>
@@ -87,6 +156,10 @@ const Contact: FC = () => {
                   type="number"
                   id="telephone"
                   name="telephone"
+                  onChange={(e) => {
+                    setTelephone(e.target.value);
+                  }}
+                  value={telephone}
                 />
               </div>
             </div>
@@ -103,11 +176,15 @@ const Contact: FC = () => {
           >
             <textarea
               className={styles.formTextarea}
+              required
               id="comments"
               name="comment"
-              required
+              onChange={(e) => {
+                setMessage(e.target.value);
+              }}
+              value={message}
             />
-            <button className={styles.formButton} type="submit" value="Send">
+            <button className={styles.formButton} onClick={handleSubmit}>
               {t("contactBtn")}
             </button>
           </div>
