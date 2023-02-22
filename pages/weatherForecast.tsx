@@ -8,7 +8,7 @@ import "animate.css";
 import CurrentWeather from "../components/weather/CurrentWeather";
 import Forecast from "../components/weather/Forecast";
 import SearchLocation from "../components/weather/SearchLocation";
-import { WEATHER_API_URL, WEATHER_API_KEY } from "../api";
+import { WEATHER_API_URL } from "../api";
 import styles from "../styles/Home.module.css";
 import Whatsapp from "../components/Whatsapp";
 
@@ -28,7 +28,7 @@ const Weather = () => {
 
   React.useEffect(() => {
     fetch(
-      `${WEATHER_API_URL}/weather?lat=45.472222&lon=22.810797&appid=${WEATHER_API_KEY}&units=metric`
+      `${WEATHER_API_URL}/weather?lat=45.472222&lon=22.810797&appid=${process.env.NEXT_PUBLIC_WEATHER_API_KEY}&units=metric`
     )
       .then(async (response) => {
         const data = await response.json();
@@ -42,7 +42,7 @@ const Weather = () => {
 
   React.useEffect(() => {
     fetch(
-      `${WEATHER_API_URL}/forecast?lat=45.472222&lon=22.810797&appid=${WEATHER_API_KEY}&units=metric`
+      `${WEATHER_API_URL}/forecast?lat=45.472222&lon=22.810797&appid=${process.env.NEXT_PUBLIC_WEATHER_API_KEY}&units=metric`
     )
       .then(async (response) => {
         const data = await response.json();
@@ -58,10 +58,10 @@ const Weather = () => {
     const [lat, lon] = options.value.split(" ");
 
     const currentWeatherFetch = fetch(
-      `${WEATHER_API_URL}/weather?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=metric`
+      `${WEATHER_API_URL}/weather?lat=${lat}&lon=${lon}&appid=${process.env.NEXT_PUBLIC_WEATHER_API_KEY}&units=metric`
     );
     const forecastFetch = fetch(
-      `${WEATHER_API_URL}/forecast?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=metric`
+      `${WEATHER_API_URL}/forecast?lat=${lat}&lon=${lon}&appid=${process.env.NEXT_PUBLIC_WEATHER_API_KEY}&units=metric`
     );
 
     Promise.all([currentWeatherFetch, forecastFetch])
