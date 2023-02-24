@@ -35,12 +35,10 @@ export default function (req, res) {
       res.status(404).json({
         error: `Connection refused at ${err.address}`,
       });
-      console.log(err);
     } else {
       res.status(200).json({
         success: `Message delivered to ${info.accepted}`,
       });
-      console.log(info);
     }
   });
 }
