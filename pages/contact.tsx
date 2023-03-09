@@ -14,7 +14,7 @@ const PContact = () => {
 
   return (
     <div className="animate__animated animate__fadeIn">
-      <TopNav />
+      <TopNav page={"contact"} />
       <div className={styles.container}>
         <Whatsapp />
         <Contact />

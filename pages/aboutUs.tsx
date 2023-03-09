@@ -19,7 +19,7 @@ const PAboutUs = () => {
 
   return (
     <div className="animate__animated animate__fadeIn">
-      <TopNav />
+      <TopNav page={"aboutus"} />
       <div className={styles.container}>
         <Whatsapp />
         <div className={styles.cardContainer}>

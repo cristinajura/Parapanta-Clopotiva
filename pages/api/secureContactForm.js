@@ -1,7 +1,8 @@
-export default function (req, res) {
+const secureContactForm = (req, res) => {
   require("dotenv").config();
 
   let nodemailer = require("nodemailer");
+
   const transporter = nodemailer.createTransport({
     port: 465,
     host: "smtp.gmail.com",
@@ -41,4 +42,6 @@ export default function (req, res) {
       });
     }
   });
-}
+};
+
+export default secureContactForm;

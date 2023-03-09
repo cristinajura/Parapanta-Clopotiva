@@ -20,7 +20,7 @@ const PSchool = () => {
 
   return (
     <div className="animate__animated animate__fadeIn">
-      <TopNav />
+      <TopNav page={"school"} />
       <div className={styles.container}>
         <Whatsapp />
         <div className={styles.cardContainer}>

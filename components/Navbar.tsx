@@ -27,7 +27,11 @@ function listenForOutsideClicks(
   };
 }
 
-const TopNav: FC = () => {
+type Props = {
+  page: string;
+};
+
+const TopNav: FC<Props> = ({ page }) => {
   const router = useRouter();
   const changeTo = router.locale === "en" ? "ro" : "en";
   const { t } = useTranslation(["nav", "common"]);
@@ -84,37 +88,93 @@ const TopNav: FC = () => {
                 ></div>
               </li>
               <li key={1}>
-                <Link className={styles.navLink} href="/">
+                <Link
+                  className={styles.navLink}
+                  style={
+                    page === "home"
+                      ? { color: "rgb(56, 131, 200)" }
+                      : { color: "rgb(33, 32, 32)" }
+                  }
+                  href="/"
+                >
                   {t("navHome")}
                 </Link>
               </li>
               <li key={2}>
-                <Link className={styles.navLink} href="/tandems">
+                <Link
+                  className={styles.navLink}
+                  style={
+                    page === "tandem"
+                      ? { color: "rgb(56, 131, 200)" }
+                      : { color: "rgb(33, 32, 32)" }
+                  }
+                  href="/tandems"
+                >
                   {t("navTandem")}
                 </Link>
               </li>
               <li key={3}>
-                <Link className={styles.navLink} href="/voucher">
+                <Link
+                  className={styles.navLink}
+                  style={
+                    page === "voucher"
+                      ? { color: "rgb(56, 131, 200)" }
+                      : { color: "rgb(33, 32, 32)" }
+                  }
+                  href="/voucher"
+                >
                   {t("navVoucher")}
                 </Link>
               </li>
               <li key={4}>
-                <Link className={styles.navLink} href="/school">
+                <Link
+                  className={styles.navLink}
+                  style={
+                    page === "school"
+                      ? { color: "rgb(56, 131, 200)" }
+                      : { color: "rgb(33, 32, 32)" }
+                  }
+                  href="/school"
+                >
                   {t("navSchool")}
                 </Link>
               </li>
               <li key={5}>
-                <Link className={styles.navLink} href="/aboutUs">
+                <Link
+                  className={styles.navLink}
+                  style={
+                    page === "aboutus"
+                      ? { color: "rgb(56, 131, 200)" }
+                      : { color: "rgb(33, 32, 32)" }
+                  }
+                  href="/aboutUs"
+                >
                   {t("navAboutus")}
                 </Link>
               </li>
               <li key={6}>
-                <Link className={styles.navLink} href="/weatherForecast">
+                <Link
+                  className={styles.navLink}
+                  style={
+                    page === "weather"
+                      ? { color: "rgb(56, 131, 200)" }
+                      : { color: "rgb(33, 32, 32)" }
+                  }
+                  href="/weatherForecast"
+                >
                   {t("navWeather")}
                 </Link>
               </li>
               <li key={7}>
-                <Link className={styles.navLink} href="/contact">
+                <Link
+                  className={styles.navLink}
+                  style={
+                    page === "contact"
+                      ? { color: "rgb(56, 131, 200)" }
+                      : { color: "rgb(33, 32, 32)" }
+                  }
+                  href="/contact"
+                >
                   {t("navContact")}
                 </Link>
               </li>

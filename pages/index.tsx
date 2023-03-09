@@ -18,7 +18,7 @@ const App = () => {
 
   return (
     <div className="animate__animated animate__fadeIn">
-      <TopNav />
+      <TopNav page={"home"} />
       <div className={styles.container}>
         <Whatsapp />
         <Home />

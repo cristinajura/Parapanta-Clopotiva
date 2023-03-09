@@ -83,7 +83,7 @@ const Weather = () => {
 
   return (
     <div className="animate__animated animate__fadeIn">
-      <TopNav />
+      <TopNav page={"weather"} />
       <div className={styles.container} style={{ marginTop: "6.5rem" }}>
         <Whatsapp />
         <div className={styles.weatherContainer}>

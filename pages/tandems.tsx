@@ -13,6 +13,7 @@ import "aos/dist/aos.css";
 
 const PTandems = () => {
   const { t } = useTranslation(["tandem", "common", "nav", "footer"]);
+  const [page, setMenu] = React.useState("");
 
   React.useEffect(() => {
     AOS.init({});
@@ -20,7 +21,7 @@ const PTandems = () => {
 
   return (
     <div className="animate__animated animate__fadeIn">
-      <TopNav />
+      <TopNav page={"tandem"} />
       <div className={styles.container}>
         <Whatsapp />
         <div className={styles.cardContainer}>

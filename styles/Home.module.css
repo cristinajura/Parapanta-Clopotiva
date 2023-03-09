@@ -117,11 +117,12 @@
   float: left;
 }
 .navLink {
-  color: rgb(59, 58, 58);
+  color: rgb(33, 32, 32);
   text-decoration: none;
+  font-size: 15px;
 }
 .navLink:hover {
-  color: rgb(34, 101, 164);
+  text-shadow: 1px 1px rgb(203, 202, 202);
 }
 .languageBtn {
   width: 70px;
@@ -295,6 +296,7 @@
 }
 .footerBottom {
   margin-left: 10px;
+  font-size: 14px;
 }
 .socialMedia {
   display: flex;
@@ -484,10 +486,10 @@
   border-radius: 50%;
   background: rgb(20, 190, 20);
   position: fixed;
-  font-size: 44px;
+  font-size: 45px;
   margin-left: 90vw;
   margin-bottom: 5vh;
-  border: 3px solid rgb(2, 198, 19);
+  border: 3px solid rgb(2, 187, 18);
   bottom: 0;
   z-index: 20;
 }
@@ -613,7 +615,7 @@
   }
 }
 .windmapText {
-  font-size: 12px;
+  font-size: 13px;
   text-shadow: 1px 2px 1px black;
   margin-left: 5px;
   margin-right: 5px;
