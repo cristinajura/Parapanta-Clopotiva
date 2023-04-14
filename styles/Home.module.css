@@ -482,14 +482,15 @@
 
 .whatsapp {
   width: 56px;
-  height: 56px;
+  height: 54px;
   border-radius: 50%;
   background: rgb(20, 190, 20);
+  border: 2px solid rgb(20, 190, 20);
   position: fixed;
   font-size: 45px;
   margin-left: 90vw;
-  margin-bottom: 5vh;
-  border: 3px solid rgb(2, 187, 18);
+  margin-bottom: 4vh;
+  box-shadow: 2px 4px 12px rgb(128, 128, 128);
   bottom: 0;
   z-index: 20;
 }
@@ -904,4 +905,7 @@
   margin-bottom: -12px;
   margin-top: 5px;
   margin-right: 10px;
+}
+.arrows:hover {
+  font-size: 22px;
 }

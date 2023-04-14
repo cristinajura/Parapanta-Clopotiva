@@ -3,7 +3,12 @@ import React from "react";
 import SortDownIcon from "@rsuite/icons/SortDown";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTranslation } from "next-i18next";
-import { FaAngleDoubleRight, FaAngleDoubleLeft } from "react-icons/fa";
+import {
+  FaAngleDoubleRight,
+  FaAngleDoubleLeft,
+  FaAngleDoubleDown,
+  FaAngleDoubleUp,
+} from "react-icons/fa";
 
 const HOURS = [
   "00:00",
@@ -87,6 +92,19 @@ const Forecast = ({ data }: any) => {
                   : t("tomorrow")}
               </div>
               <div>{data?.list[0].dt_txt.slice(0, 10)}</div>
+              {!isTabletOrPhone ? (
+                show ? (
+                  <FaAngleDoubleUp
+                    className={styles.arrows}
+                    style={{ marginTop: "96px", marginLeft: "10px" }}
+                  />
+                ) : (
+                  <FaAngleDoubleDown
+                    className={styles.arrows}
+                    style={{ marginTop: "96px", marginLeft: "10px" }}
+                  />
+                )
+              ) : null}
             </div>
             {!isTabletOrPhone && data ? (
               <div className={showOrHide}>
@@ -259,6 +277,19 @@ const Forecast = ({ data }: any) => {
                     : forecastDays[2]}
                 </div>
                 <div>{data?.list[currHourLength].dt_txt.slice(0, 10)}</div>
+                {!isTabletOrPhone ? (
+                  show1 ? (
+                    <FaAngleDoubleUp
+                      className={styles.arrows}
+                      style={{ marginTop: "96px", marginLeft: "10px" }}
+                    />
+                  ) : (
+                    <FaAngleDoubleDown
+                      className={styles.arrows}
+                      style={{ marginTop: "96px", marginLeft: "10px" }}
+                    />
+                  )
+                ) : null}
               </div>
             </div>
             {!isTabletOrPhone && data ? (
@@ -432,6 +463,19 @@ const Forecast = ({ data }: any) => {
                   : forecastDays[2]}
               </div>
               <div>{data?.list[currHourLength + 8].dt_txt.slice(0, 10)}</div>
+              {!isTabletOrPhone ? (
+                show2 ? (
+                  <FaAngleDoubleUp
+                    className={styles.arrows}
+                    style={{ marginTop: "96px", marginLeft: "10px" }}
+                  />
+                ) : (
+                  <FaAngleDoubleDown
+                    className={styles.arrows}
+                    style={{ marginTop: "96px", marginLeft: "10px" }}
+                  />
+                )
+              ) : null}
             </div>
             {!isTabletOrPhone && data ? (
               <div className={showOrHide2}>
@@ -604,6 +648,19 @@ const Forecast = ({ data }: any) => {
                   : forecastDays[3]}
               </div>
               <div>{data?.list[currHourLength + 16].dt_txt.slice(0, 10)}</div>
+              {!isTabletOrPhone ? (
+                show3 ? (
+                  <FaAngleDoubleUp
+                    className={styles.arrows}
+                    style={{ marginTop: "90px", marginLeft: "10px" }}
+                  />
+                ) : (
+                  <FaAngleDoubleDown
+                    className={styles.arrows}
+                    style={{ marginTop: "96px", marginLeft: "10px" }}
+                  />
+                )
+              ) : null}
             </div>
             {!isTabletOrPhone && data ? (
               <div className={showOrHide3}>
