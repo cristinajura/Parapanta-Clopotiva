@@ -26,7 +26,7 @@ const CurrentWeather = ({ data }: any) => {
     >
       <img src="../paragliding.jpg" alt="Clopotiva take-off" />
       <a
-        href="https://www.windmap.vercel.app/"
+        href="https://windmap.vercel.app/"
         target="blank"
         className={styles.windmapA}
       >
