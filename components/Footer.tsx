@@ -26,7 +26,9 @@ const Footer: FC = () => {
         {t("footerFollow")}
       </div>
       <p>
-        <em>{t("footerCoffee")}</em>
+        <em>
+          <small>{t("footerCoffee")}</small>
+        </em>
       </p>
       <div className={styles.socialMedia}>
         <a
@@ -35,7 +37,7 @@ const Footer: FC = () => {
           target="blank"
         >
           <FaFacebookSquare />{" "}
-          <div style={{ marginLeft: "6px", marginTop: "-5px" }}>
+          <div style={{ marginLeft: "10px", marginTop: "-5px" }}>
             {t("footerFb")}
           </div>
         </a>
@@ -46,19 +48,8 @@ const Footer: FC = () => {
           target="blank"
         >
           <FaInstagramSquare />{" "}
-          <div style={{ marginLeft: "6px", marginTop: "-5px" }}>
+          <div style={{ marginLeft: "10px", marginTop: "-5px" }}>
             {t("footerInst")}
-          </div>
-        </a>
-
-        <a
-          style={{ display: "flex" }}
-          href="https://twitter.com/clopotiva"
-          target="blank"
-        >
-          <FaTwitter />{" "}
-          <div style={{ marginLeft: "6px", marginTop: "-5px" }}>
-            {t("footerTwit")}
           </div>
         </a>
       </div>
