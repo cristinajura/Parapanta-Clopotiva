@@ -3,14 +3,13 @@ import { useTranslation } from "next-i18next";
 import styles from "../styles/Home.module.css";
 import type { FC } from "react";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import { useSnackbar } from "notistack";
+import { SnackbarProvider, enqueueSnackbar } from "notistack";
 
 const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w+)+$/;
 
 const Contact: FC = () => {
   const { t } = useTranslation("contact");
   let isTabletOrPhone = useMediaQuery("(min-width:800px)");
-  const { enqueueSnackbar } = useSnackbar();
 
   const [first, setFirst] = useState("");
   const [last, setLast] = useState("");
@@ -167,6 +166,7 @@ const Contact: FC = () => {
           <div className={styles.textareaText}>
             <label htmlFor="comments">{t("contactText")}</label>
           </div>
+          <SnackbarProvider />
           <div
             style={{
               display: "flex",
