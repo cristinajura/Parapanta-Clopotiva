@@ -1,5 +1,5 @@
 {
-  "name": "first-next-project",
+  "name": "parapanta_clopotiva",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -24,7 +24,7 @@
     "axios": "^1.7.2",
     "cookies-next": "^4.2.1",
     "dotenv": "^16.4.5",
-    "eslint": "9.3.0",
+    "eslint": "8.0.0",
     "eslint-config-next": "14.2.3",
     "google-map-react": "^2.2.1",
     "i18next": "^23.11.5",
